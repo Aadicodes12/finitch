@@ -11,7 +11,7 @@ const Index = () => {
         alt="Finitch Landing Page"
         className="max-w-full max-h-screen object-contain"
       />
-      <div className="absolute top-[43%] left-1/2 -translate-x-[45%] -translate-y-1/2 w-full px-4 md:left-[34%] md:translate-x-0">
+      <div className="absolute top-[43%] left-1/2 -translate-x-[46%] -translate-y-1/2 w-full px-4 md:left-[34%] md:translate-x-0">
         <WaitlistForm />
       </div>
     </div>
