@@ -20,11 +20,11 @@ const Index = () => {
     <div
       className="min-h-screen w-full relative flex flex-col items-center justify-center p-4"
     >
-      {/* Diagnostic: Using an <img> tag to check if the image loads */}
+      {/* Diagnostic: Using an <img> tag to check if the image loads, with a red border */}
       <img
         src="/finitch-landing.jpg"
         alt="Finitch Landing"
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0 border-4 border-red-500" // Added red border for diagnosis
       />
       
       <div className="relative z-10 text-center max-w-2xl mx-auto text-gray-900 space-y-6">
