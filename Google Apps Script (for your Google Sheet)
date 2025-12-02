@@ -1,14 +1,28 @@
 function doPost(e) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-  var data = JSON.parse(e.postData.contents);
-  var email = data.email;
+  
+  // Log the incoming request data for debugging
+  Logger.log("Received POST request.");
+  Logger.log("Content-Type: " + e.postData.type);
+  Logger.log("Content: " + e.postData.contents);
 
-  if (email) {
-    sheet.appendRow([new Date(), email]);
-    return ContentService.createTextOutput(JSON.stringify({ status: "success", message: "Email added to waitlist." }))
-      .setMimeType(ContentService.MimeType.JSON);
-  } else {
-    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: "No email provided." }))
+  try {
+    var data = JSON.parse(e.postData.contents);
+    var email = data.email;
+
+    if (email) {
+      sheet.appendRow([new Date(), email]);
+      Logger.log("Email '" + email + "' added to sheet.");
+      return ContentService.createTextOutput(JSON.stringify({ status: "success", message: "Email added to waitlist." }))
+        .setMimeType(ContentService.MimeType.JSON);
+    } else {
+      Logger.log("Error: No email provided in the request data.");
+      return ContentService.createTextOutput(JSON.stringify({ status: "error", message: "No email provided." }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+  } catch (error) {
+    Logger.log("Error parsing JSON or processing request: " + error.toString());
+    return ContentService.createTextOutput(JSON.stringify({ status: "error", message: "Internal server error." }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
