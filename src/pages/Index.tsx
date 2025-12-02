@@ -5,10 +5,10 @@ import WaitlistForm from "@/components/WaitlistForm";
 
 const Index = () => {
   return (
-    <div className="w-screen flex flex-col items-center justify-start">
-      {/* Initial landing page section - always takes at least full screen height */}
+    <>
+      {/* Initial landing page section - always takes exactly full screen height */}
       <div
-        className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
+        className="relative h-screen w-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
         style={{ backgroundImage: `url('/finitch-landing.png')` }}
       >
         <div className="absolute top-[44%] left-[51.5%] -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
@@ -26,7 +26,7 @@ const Index = () => {
         ))}
         <p className="mt-8 text-xl font-semibold">If you see this and no scrollbar, something is fundamentally wrong!</p>
       </div>
-    </div>
+    </>
   );
 };
 
