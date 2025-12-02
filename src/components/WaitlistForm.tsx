@@ -1,11 +1,10 @@
-' icon next to the email input.">
 "use client";
 
 import React from "react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button"; // Import Button
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { ChevronRight } from "lucide-react"; // Import ChevronRight icon
+import { ChevronRight } from "lucide-react";
 
 const WaitlistForm = () => {
   const [email, setEmail] = React.useState("");
