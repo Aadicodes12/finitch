@@ -95,6 +95,10 @@
     @apply border-border;
   }
 
+  html, body, #root { /* Added #root here */
+    height: 100%; /* Explicitly set height to 100% */
+  }
+
   body {
     @apply bg-background text-foreground overflow-hidden md:overflow-y-auto;
   }
