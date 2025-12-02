@@ -1,0 +1,44 @@
+function doGet(e) {
+  return HtmlService.createHtmlOutput("Please use POST requests to submit data.");
+}
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+  var result = {};
+
+  if (e.postData && e.postData.contents) {
+    var data = JSON.parse(e.postData.contents);
+    var email = data.email;
+
+    if (email) {
+      // Find the column index for 'Email'
+      var emailColumnIndex = headers.indexOf("Email");
+      if (emailColumnIndex === -1) {
+        // If 'Email' header doesn't exist, add it
+        sheet.getRange(1, sheet.getLastColumn() + 1).setValue("Email");
+        emailColumnIndex = sheet.getLastColumn() - 1; // Adjust for 0-based index
+      }
+
+      // Find the column index for 'Timestamp'
+      var timestampColumnIndex = headers.indexOf("Timestamp");
+      if (timestampColumnIndex === -1) {
+        // If 'Timestamp' header doesn't exist, add it
+        sheet.getRange(1, sheet.getLastColumn() + 1).setValue("Timestamp");
+        timestampColumnIndex = sheet.getLastColumn() - 1; // Adjust for 0-based index
+      }
+
+      // Append the new row
+      var newRow = [];
+      newRow[emailColumnIndex] = email;
+      newRow[timestampColumnIndex] = new Date();
+      sheet.appendRow(newRow);
+
+      return ContentService.createTextOutput(JSON.stringify({ status: "success", message: "Email added to waitlist." }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
+  }
+
+  return ContentService.createTextOutput(JSON.stringify({ status: "error", message: "Invalid request or missing email." }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
