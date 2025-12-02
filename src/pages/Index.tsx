@@ -9,7 +9,7 @@ const Index = () => {
       <img
         src="/finitch-landing.png"
         alt="Finitch Landing Page"
-        className="w-full h-full object-cover absolute inset-0"
+        className="w-full h-full object-contain absolute inset-0" // Changed to object-contain
       />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full px-4 max-w-sm md:left-[15%] md:translate-x-0">
         <WaitlistForm />
