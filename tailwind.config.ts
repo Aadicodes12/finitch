@@ -62,8 +62,7 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // Custom color added for the background
-        "finitch-blue": "#2596be",
+        // Removed the custom 'finitch-blue' color as it's not needed for the background.
       },
       borderRadius: {
         lg: "var(--radius)",

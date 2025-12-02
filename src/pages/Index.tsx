@@ -6,8 +6,8 @@ import WaitlistForm from "@/components/WaitlistForm";
 const Index = () => {
   return (
     // The main container for the landing page.
-    // Setting background to the custom 'finitch-blue' color.
-    <div className="relative h-screen w-screen flex items-center justify-center overflow-hidden bg-finitch-blue">
+    // Setting background to bg-gray-50 to closely match the image's grey background.
+    <div className="relative h-screen w-screen flex items-center justify-center overflow-hidden bg-gray-50">
       <img
         src="/finitch-landing-new.png"
         alt="Finitch Landing Page"
