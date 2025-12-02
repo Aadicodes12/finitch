@@ -18,12 +18,16 @@ const Index = () => {
 
   return (
     <div
-      className="min-h-screen w-full bg-cover bg-center relative flex flex-col items-center justify-center p-4"
-      style={{ backgroundImage: `url('/finitch-landing.jpg')` }}
+      className="min-h-screen w-full relative flex flex-col items-center justify-center p-4"
     >
-      {/* Removed the black overlay as the image itself is light */}
+      {/* Diagnostic: Using an <img> tag to check if the image loads */}
+      <img
+        src="/finitch-landing.jpg"
+        alt="Finitch Landing"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      />
       
-      <div className="relative z-10 text-center max-w-2xl mx-auto text-gray-900 space-y-6"> {/* Changed text-white to text-gray-900 */}
+      <div className="relative z-10 text-center max-w-2xl mx-auto text-gray-900 space-y-6">
         <h1 className="text-6xl md:text-7xl font-extrabold mb-4">Finitch</h1>
         <p className="text-2xl md:text-3xl mb-8">Financial news.Decoded</p>
         <p className="text-xl md:text-2xl mb-6">Get on our waitlist now!</p>
