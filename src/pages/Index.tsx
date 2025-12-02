@@ -11,7 +11,7 @@ const Index = () => {
         alt="Finitch Landing Page"
         className="w-full h-auto" // Image will scale to full width, height auto, maintaining aspect ratio
       />
-      <div className="absolute top-[45%] left-1/2 -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
+      <div className="absolute top-[44%] left-1/2 -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
         <WaitlistForm />
       </div>
     </div>
