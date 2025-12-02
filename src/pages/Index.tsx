@@ -9,7 +9,7 @@ const Index = () => {
       <img
         src="/finitch-landing.png"
         alt="Finitch Landing Page"
-        className="w-full h-auto -translate-y-[0.5%]" // Nudges the image up by 0.5% of its height
+        className="w-full h-auto -translate-y-[1%]" // Nudges the image up by 1% of its height
       />
       <div className="absolute top-[44%] left-[51.5%] -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
         <WaitlistForm />
