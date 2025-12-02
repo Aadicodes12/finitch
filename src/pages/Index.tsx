@@ -5,7 +5,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-start bg-white relative overflow-hidden md:overflow-y-auto">
+    <div className="min-h-screen w-screen flex flex-col items-center justify-start bg-white relative">
       <img
         src="/finitch-landing.png"
         alt="Finitch Landing Page"
