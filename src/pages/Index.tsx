@@ -18,18 +18,18 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-background p-4">
-      <div className="text-center space-y-6">
-        <h1 className="text-5xl font-extrabold text-gray-900 dark:text-foreground mb-4">Finitch</h1>
-        <p className="text-2xl text-gray-700 dark:text-muted-foreground">Financial news.Decoded</p>
-        <p className="text-xl text-gray-800 dark:text-foreground mt-8">Get on our waitlist now!</p>
+      <div className="text-center max-w-2xl mx-auto">
+        <h1 className="text-6xl md:text-7xl font-extrabold text-gray-900 dark:text-foreground mb-4">Finitch</h1>
+        <p className="text-2xl md:text-3xl text-gray-700 dark:text-muted-foreground mb-8">Financial news.Decoded</p>
+        <p className="text-xl md:text-2xl text-gray-800 dark:text-foreground mb-6">Get on our waitlist now!</p>
         
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-2 mt-4">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="max-w-sm w-full sm:w-auto px-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring focus:outline-none dark:bg-card dark:text-card-foreground"
+            className="w-full sm:w-96 px-4 py-2 border border-input rounded-md focus:ring-2 focus:ring-ring focus:outline-none dark:bg-card dark:text-card-foreground"
             required
           />
           <Button 
