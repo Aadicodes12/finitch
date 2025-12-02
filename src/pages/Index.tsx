@@ -5,7 +5,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 
 const Index = () => {
   return (
-    <div className="w-screen flex flex-col items-center justify-start"> {/* Removed min-h-screen from here */}
+    <div className="w-screen flex flex-col items-center justify-start">
       {/* Initial landing page section - always takes at least full screen height */}
       <div
         className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"

@@ -95,8 +95,8 @@
     @apply border-border;
   }
 
-  html, body, #root { /* Added #root here */
-    height: 100%; /* Explicitly set height to 100% */
+  html, body, #root {
+    height: 100%;
   }
 
   body {
