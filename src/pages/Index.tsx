@@ -10,7 +10,7 @@ const Index = () => {
     // It still takes full screen height and width.
     <div className="relative h-screen w-screen flex items-center justify-center overflow-hidden bg-gray-100">
       <img
-        src="/finitch-landing.jpg"
+        src="/finitch-landing-new.png"
         alt="Finitch Landing Page"
         className="absolute inset-0 w-full h-full object-contain"
       />
