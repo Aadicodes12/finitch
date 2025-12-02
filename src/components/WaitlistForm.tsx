@@ -28,9 +28,9 @@ const WaitlistForm = () => {
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="bg-white text-gray-800 placeholder-gray-500 border-gray-300 focus:border-blue-500 focus:ring-blue-500 flex-grow"
+        className="h-12 bg-white text-gray-800 placeholder-gray-500 border-gray-300 focus:border-blue-500 focus:ring-blue-500 flex-grow"
       />
-      <Button type="submit" size="icon" className="bg-black hover:bg-gray-800 text-white">
+      <Button type="submit" size="icon" className="h-12 w-12 bg-black hover:bg-gray-800 text-white">
         <ChevronRight className="h-4 w-4" />
       </Button>
     </form>
