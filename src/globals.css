@@ -96,6 +96,6 @@
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-hidden; /* Added overflow-x-hidden */
+    @apply bg-background text-foreground;
   }
 }
