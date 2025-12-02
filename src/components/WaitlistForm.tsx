@@ -1,8 +1,11 @@
+' icon next to the email input.">
 "use client";
 
 import React from "react";
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button"; // Import Button
 import { toast } from "sonner";
+import { ChevronRight } from "lucide-react"; // Import ChevronRight icon
 
 const WaitlistForm = () => {
   const [email, setEmail] = React.useState("");
@@ -20,14 +23,17 @@ const WaitlistForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2">
       <Input
         type="email"
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="bg-white text-gray-800 placeholder-gray-500 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
+        className="bg-white text-gray-800 placeholder-gray-500 border-gray-300 focus:border-blue-500 focus:ring-blue-500 flex-grow"
       />
+      <Button type="submit" size="icon" className="bg-blue-600 hover:bg-blue-700 text-white">
+        <ChevronRight className="h-4 w-4" />
+      </Button>
     </form>
   );
 };
