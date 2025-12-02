@@ -9,7 +9,7 @@ const Index = () => {
       <img
         src="/finitch-landing.png"
         alt="Finitch Landing Page"
-        className="w-full h-full object-cover absolute inset-0"
+        className="w-full h-full object-cover absolute left-0 right-0 bottom-0 top-8 md:top-0" // Adjusted top for mobile
       />
       <div className="absolute top-[50%] left-1/2 -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
         <WaitlistForm />
