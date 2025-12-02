@@ -18,7 +18,7 @@ const Index = () => {
         />
 
         {/* Adjusted positioning for the WaitlistForm to align with the "Get on our waitlist now!" text in the image */}
-        <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex justify-center z-10">
+        <div className="absolute bottom-[25%] left-1/2 -translate-x-1/2 w-full px-4 flex justify-center z-10">
           <WaitlistForm />
         </div>
       </div>
