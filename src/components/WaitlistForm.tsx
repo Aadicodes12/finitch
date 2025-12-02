@@ -19,7 +19,7 @@ const WaitlistForm = () => {
 
     setIsLoading(true);
     // <<< REPLACE THIS WITH YOUR DEPLOYED GOOGLE APPS SCRIPT URL >>>
-    const GOOGLE_APPS_SCRIPT_URL = "YOUR_DEPLOYED_GOOGLE_APPS_SCRIPT_URL_HERE"; 
+    const GOOGLE_APPS_SCRIPT_URL = ""; 
 
     try {
       const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
