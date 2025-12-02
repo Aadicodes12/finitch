@@ -9,9 +9,10 @@ const Index = () => {
       {/* Initial landing page section - always takes exactly full screen height */}
       <div
         className="relative h-screen w-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
-        style={{ backgroundImage: `url('/finitch-landing.png')` }}
+        style={{ backgroundImage: `url('/finitch-landing.jpg')` }}
       >
-        <div className="absolute top-[44%] left-[51.5%] -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
+        {/* Adjusted positioning for the WaitlistForm to align with the new image content */}
+        <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex justify-center">
           <WaitlistForm />
         </div>
       </div>
