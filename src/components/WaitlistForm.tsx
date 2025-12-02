@@ -2,7 +2,6 @@
 
 import React from "react";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 const WaitlistForm = () => {
@@ -21,7 +20,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center">
       <Input
         type="email"
         placeholder="Enter your email"
@@ -29,9 +28,6 @@ const WaitlistForm = () => {
         onChange={(e) => setEmail(e.target.value)}
         className="bg-white text-gray-800 placeholder-gray-500 border-gray-300 focus:border-blue-500 focus:ring-blue-500"
       />
-      <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white">
-        Join Waitlist
-      </Button>
     </form>
   );
 };
