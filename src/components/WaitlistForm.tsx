@@ -18,7 +18,7 @@ const WaitlistForm = () => {
     }
 
     setIsLoading(true);
-    const GOOGLE_APPS_SCRIPT_URL = ""; // <<< REPLACE THIS WITH YOUR DEPLOYED SCRIPT URL
+    const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxil3badBJYApVL_8-ljfcYXYgAhEgdpXa_aCMrPmWPdeU9Fj8rkoXcwx9mMAfVsjuvNQ/exec"; // <<< REPLACE THIS WITH YOUR DEPLOYED SCRIPT URL
 
     try {
       const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
