@@ -1,6 +1,5 @@
 "use client";
 
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import React from "react";
 
 const Index = () => {
@@ -10,7 +9,6 @@ const Index = () => {
       <p className="text-lg text-gray-600 mb-8">
         Your application is ready. Let's build something amazing!
       </p>
-      <MadeWithDyad />
     </div>
   );
 };
