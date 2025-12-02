@@ -22,7 +22,7 @@ const WaitlistForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-sm items-center space-x-2">
+    <form onSubmit={handleSubmit} className="flex w-full max-w-xs items-center space-x-2">
       <Input
         type="email"
         placeholder="Enter your email"
