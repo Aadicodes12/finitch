@@ -33,7 +33,7 @@ export default {
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+          DEFAULT: "0 84.2% 60.2%",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
@@ -62,6 +62,8 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom color added for the background
+        "finitch-blue": "#2596be",
       },
       borderRadius: {
         lg: "var(--radius)",
