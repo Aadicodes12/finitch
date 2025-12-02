@@ -7,12 +7,18 @@ const Index = () => {
   return (
     <>
       {/* Initial landing page section - always takes exactly full screen height */}
-      <div
-        className="relative h-screen w-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
-        style={{ backgroundImage: `url('/finitch-landing.jpg')` }}
-      >
-        {/* Adjusted positioning for the WaitlistForm to align with the new image content */}
-        <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex justify-center">
+      <div className="relative h-screen w-screen flex items-center justify-center overflow-hidden">
+        {/* Using an <img> tag with object-contain to ensure the entire image is visible without clipping.
+            Note: This might result in empty space (letterboxing/pillarboxing) if the image's aspect ratio
+            doesn't perfectly match the screen's aspect ratio. */}
+        <img
+          src="/finitch-landing.jpg"
+          alt="Finitch Landing Page"
+          className="absolute inset-0 w-full h-full object-contain"
+        />
+
+        {/* Adjusted positioning for the WaitlistForm to align with the "Get on our waitlist now!" text in the image */}
+        <div className="absolute bottom-[20%] left-1/2 -translate-x-1/2 w-full px-4 flex justify-center z-10">
           <WaitlistForm />
         </div>
       </div>
