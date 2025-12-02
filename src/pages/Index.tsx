@@ -5,12 +5,10 @@ import WaitlistForm from "@/components/WaitlistForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-start bg-white relative">
-      <img
-        src="/finitch-landing.png"
-        alt="Finitch Landing Page"
-        className="w-full h-auto -translate-y-[2.25%]" // Nudges the image up by 2.25% of its height
-      />
+    <div
+      className="relative min-h-screen w-screen bg-cover bg-center bg-no-repeat flex items-center justify-center"
+      style={{ backgroundImage: `url('/finitch-landing.png')` }}
+    >
       <div className="absolute top-[44%] left-[51.5%] -translate-x-[43%] -translate-y-1/2 w-full px-4 md:top-[43%] md:left-[34%] md:translate-x-0">
         <WaitlistForm />
       </div>
