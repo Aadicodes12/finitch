@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="min-h-screen w-screen flex items-center justify-center bg-white relative overflow-hidden">
       <img
-        src="/finitch-landing.jpg"
+        src="/finitch-landing-new.png"
         alt="Finitch Landing Page"
         className="w-full h-full object-cover absolute inset-0"
       />
