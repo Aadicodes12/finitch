@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { ChevronRight } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client"; // Import the Supabase client
 
 const WaitlistForm = () => {
   const [email, setEmail] = React.useState("");
@@ -18,28 +19,24 @@ const WaitlistForm = () => {
     }
 
     setIsLoading(true);
-    // <<< REPLACE THIS WITH YOUR DEPLOYED GOOGLE APPS SCRIPT URL >>>
-    const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxil3badBJYApVL_8-ljfcYXYgAhEgdpXa_aCMrPmWPdeU9Fj8rkoXcwx9mMAfVsjuvNQ/exec"; 
 
     try {
-      const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors", // Required for Google Apps Script as a simple POST
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: email }),
-      });
+      const { data, error } = await supabase
+        .from("waitlist_emails")
+        .insert([{ email: email }]);
 
-      // Note: When using 'no-cors', the response object will be opaque.
-      // We can't read the actual response body (like status: 'success').
-      // For a simple waitlist, we'll assume success if the fetch doesn't throw an error.
-      // For more robust error handling, you'd need a proper backend or a more complex Apps Script setup.
-
-      toast.success(`Thanks for joining the waitlist, ${email}!`);
-      setEmail("");
-    } catch (error) {
-      console.error("Error joining waitlist:", error);
+      if (error) {
+        if (error.code === '23505') { // Unique violation error code
+          toast.info("You're already on the waitlist!");
+        } else {
+          throw error;
+        }
+      } else {
+        toast.success(`Thanks for joining the waitlist, ${email}!`);
+        setEmail("");
+      }
+    } catch (error: any) {
+      console.error("Error joining waitlist:", error.message);
       toast.error("Failed to join waitlist. Please try again.");
     } finally {
       setIsLoading(false);
